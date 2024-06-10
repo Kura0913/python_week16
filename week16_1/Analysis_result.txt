@@ -1,0 +1,15 @@
+[VIP]
+Peter buys Notebook: 15029, Computer: 16086, Paper: 17756, Mouse: 21455, Book: 13104
+John buys Book: 24152, Computer: 15977, Notebook: 9832, Paper: 18967, Mouse: 17932
+Sue buys Computer: 9825, Notebook: 18273, Mouse: 12390, Book: 18484, Paper: 12721
+
+[Member]
+Hella buys Notebook: 9135, Book: 14369, Mouse: 16459, Paper: 19307, Computer: 16823
+Lee buys Computer: 12186, Book: 16367, Notebook: 17091, Mouse: 10805, Paper: 16495
+Bob buys Computer: 19438, Notebook: 19159, Paper: 15478, Mouse: 17886, Book: 20040
+Alice buys Paper: 16689, Book: 15421, Notebook: 13912, Computer: 9212, Mouse: 8696
+
+Total Computer sales: 99547
+Total Notebook sales: 102431
+Total Paper sales: 117413
+Total Book sales: 121937
