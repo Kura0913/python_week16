@@ -46,7 +46,6 @@ def main():
         if idx > select_num_limit:
             break
         select_str += f'{idx}.{content}, '
-    select_str += f"value > {select_num_limit} to exit system."
     data = get_web_data()
     df = sort_data(pd.DataFrame(data, columns=headers[1:]), headers[select_num])
 
@@ -54,9 +53,11 @@ def main():
         print("=================================================current data=================================================")
         print(df)
         print("==============================================================================================================")
-        print(select_str)        
+        print("command:")
+        print(select_str)
+        print(f"p:前一頁 n:下一頁 其他:關閉")
         try:
-            select = input("選擇排列方式 或 上、下一頁(before、next)資料:")
+            select = input("請輸入指令:")
             select_num = int(select)
             if select_num > select_num_limit:
                 break
@@ -65,7 +66,7 @@ def main():
             else:
                 df = sort_data(df, headers[select_num])
         except:
-            if select == "next":
+            if select == "n":
                 if end_page+1 > 1910:
                     print("This is the end of datas.")
                 else:
@@ -73,7 +74,7 @@ def main():
                     end_page += 1
                     data = get_web_data(start_page, end_page)
                     df = sort_data(pd.DataFrame(data, columns=headers[1:]), headers[select_num])
-            elif select == "before":
+            elif select == "p":
                 if start_page - 1 < 0:
                     print("This is the begin of datas.")
                 else:
